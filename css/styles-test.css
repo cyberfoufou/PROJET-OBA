@@ -1,1 +1,18 @@
+  /* Fichier CSS 04/11/2025 auteur OE
+  */
 
+:root {
+  /* VARIABLE COLLECTION 
+  EX; color: var(--basecouleurs-oba-marron);
+  Peut être utlisé pour créer des thèmes
+  */
+
+  --basecouleurs-oba-marron: #8b5e3c;
+  --basecouleurs-oba-brunclair: #c7a14a;
+  --basecouleurs-oba-bleu: #e1e1e1;
+  --basecouleurs-oba-ivoire: #f8f3f0;
+  --aba1-marron: #4c6a5d;
+  --aba1-brunclair: #4c6a5d;
+  --aba1-bleu: #4c6a5d;
+  --aba1-ivoire: #4c6a5d;
+}
