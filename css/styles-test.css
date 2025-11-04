@@ -3,6 +3,7 @@
 
 :root {
   /* VARIABLE COLLECTION 
+  Pour appliquer une variable, utilisez la fonction var(--nom-de-variable) dans n'importe quelle propriété CSS
   EX; color: var(--basecouleurs-oba-marron);
   Peut être utlisé pour créer des thèmes
   */
