@@ -1,0 +1,369 @@
+
+:root {
+  /* === COULEURS DE BASE === */
+  --basecouleurs-oba-marron: #8b5e3c;
+  --basecouleurs-oba-brunclair: #c7a14a;
+  --basecouleurs-oba-bleu: #e1e1e1;
+  --basecouleurs-oba-ivoire: #f8f3f0;
+  /* === COULEURS ALTERNATIVES ABA1 === */
+  --aba1-marron: #4c6a5d;
+  --aba1-brunclair: #4c6a5d;
+  --aba1-bleu: #4c6a5d;
+  --aba1-ivoire: #4c6a5d;
+  /* === PADDING SECTIONS === */
+  --section-padding-large: 112px;
+  --section-padding-medium: 80px;
+  --section-padding-small: 48px;
+  /* === PADDING PAGES === */
+  --page-padding-global: 64px;
+  --page-padding-mobile: 24px;
+  /* === ESPACEMENTS === */
+  --gap-large: 80px;
+  --gap-medium: 40px;
+  --gap-small: 20px;
+  /* === LARGEUR CONTAINER === */
+  --Container-container-large:1280px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 6285px;
+}
+
+.bordure_verte {
+  border: 3px solid chartreuse;
+}
+
+.CadrenavBar {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  height: 72px;
+  padding: var(--section-padding-large) var(--page-padding-global);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  background: var(--basecouleurs-oba-marron);
+}
+
+.image_OBA {
+width: 257px;
+height: 285.41px;
+flex-shrink: 0;
+}
+
+.cadre-sous-image {
+display: flex;
+height: 1177px;
+max-width: var(--Container-container-large);
+flex-direction: column;
+align-items: center;
+gap: 80px;
+flex-shrink: 0;
+align-self: stretch;
+}
+
+.cadre1-cadre-sous-image {
+  display: flex;
+  height: 320px;
+width:  768px;
+flex-direction: column;
+align-items: center;
+gap: 32px;
+}
+
+.bouton-patrimoine {
+  color: var(--OBA-Ivoire, #F8F5F0);
+text-align: center;
+/* Heading/Tagline */
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+
+.essencedelart {
+  height: 48px;
+  color: var(--OBA-Ivoire, #F8F5F0);
+text-align: center;
+/* TestClassement/Desktop */
+font-family: "Playfair Display";
+font-size: 36px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.galerieOBA {
+  height: 128px;
+  color: var(--OBA-Ivoire, #F8F5F0);
+text-align: center;
+/* TestClassement/Desktop */
+font-family: "Playfair Display";
+font-size: 26px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+
+
+.deux-boutons  {
+    width:228px;
+    height: 48px;
+  color: var(--OBA-Ivoire, #F8F5F0);
+text-align: center;
+/* Heading/Tagline */
+font-family: Roboto;
+font-size: 16px;
+font-style: normal;
+font-weight: 600;
+line-height: 150%; /* 24px */
+}
+
+.placeholder-image {
+    display: flex;
+  width: 100%;
+}
+
+.image-grande {
+  height: 738px;
+flex-shrink: 0;
+object-fit: contain;
+width: 100%;
+align-self: stretch;
+}
+
+.cadre-galerie-plus-utilisé{
+  display: flex;
+width: 1357px;
+height: 1050px;
+flex-shrink: 0;
+gap: 80px;
+border: 1px solid #000;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.CadreGrandHaut {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 2755px;
+  padding: var(--section-padding-large) var(--page-padding-global);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  background: var(--basecouleurs-oba-marron);
+}
+
+.cadre_decouvrez {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 762px;
+  padding: var(--section-padding-large) var(--page-padding-global);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  background: var(--basecouleurs-oba-marron);
+}
+
+.sous-cadre_decouvrez {
+  display: flex;
+  height: 510px;
+width:  768px;
+flex-direction: column;
+align-items: center;
+gap: 32px;
+}
+
+.font-decouvrez {
+color: var(--OBA-Ivoire, #F8F5F0);
+text-align: center;
+/* TestClassement/Desktop */
+font-family: "Playfair Display";
+font-size: 60px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.cadre-bouton-decouvrez {
+  height: 50px;
+  width: 275px;
+  display: flex;
+align-items: flex-start;
+gap: 16px;
+}
+
+.cadre_témoignages {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 610px;
+  padding: var(--section-padding-large) var(--page-padding-global);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  background: var(--basecouleurs-oba-marron);
+}
+
+
+
+.cadre_contactez_map {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 1232px;
+  padding: var(--section-padding-large) var(--page-padding-global);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  background: var(--basecouleurs-oba-marron);
+}
+
+.cadre_bottom {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  min-height: 828px;
+  padding: var(--section-padding-large) var(--page-padding-global);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap-large);
+  background: var(--basecouleurs-oba-marron);
+}
+/* Galerie */
+
+/* Galerie Responsive */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+.photo {
+    width: calc(25% - 10px);
+    height: 390px;
+    overflow: hidden;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+/* Effet hover avec légende */
+.photo:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.8);
+}
+
+.photo::after {
+    content: attr(alt);
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: rgba(161, 98, 68, 0.85);
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    transition: bottom 0.3s ease;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.photo:hover::after {
+    bottom: 0;
+}
+
+/* === RESPONSIVE GALERIE === */
+
+/* Tablet - 3 photos par ligne */
+@media (max-width: 1024px) {
+    .photo {
+        width: calc(33.333% - 10px);
+        height: 350px;
+    }
+    
+    .gallery {
+        max-width: 1000px;
+        gap: 8px;
+    }
+}
+
+/* Mobile - 2 photos par ligne */
+@media (max-width: 768px) {
+    .photo {
+        width: calc(50% - 8px);
+        height: 300px;
+    }
+    
+    .gallery {
+        gap: 8px;
+        padding: 0 10px;
+    }
+    
+    .photo::after {
+        height: 35px;
+        bottom: -35px;
+        font-size: 12px;
+    }
+}
+
+/* Petit Mobile - 375px */
+@media (max-width: 480px) {
+    .photo {
+        width: calc(50% - 6px);
+        height: 250px;
+    }
+    
+    .gallery {
+        gap: 6px;
+        padding: 0 8px;
+    }
+    
+    .photo::after {
+        height: 30px;
+        bottom: -30px;
+        font-size: 11px;
+    }
+}
+
+/* Très petit mobile - 1 photo par ligne */
+@media (max-width: 375px) {
+    .photo {
+        width: 100%;
+        height: 280px;
+        margin-bottom: 8px;
+    }
+    
+    .gallery {
+        gap: 0;
+        flex-direction: column;
+    }
+}
