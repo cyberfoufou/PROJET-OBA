@@ -1,52 +1,33 @@
 :root {
-  /* === COULEURS DE BASE === */
+  /* === COULEURS === */
   --basecouleurs-oba-marron: #8b5e3c;
   --basecouleurs-oba-brunclair: #c7a14a;
   --basecouleurs-oba-bleu: #e1e1e1;
   --basecouleurs-oba-ivoire: #f8f3f0;
-  /* === COULEURS ALTERNATIVES ABA1 === */
-  --aba1-marron: #4c6a5d;
-  --aba1-brunclair: #4c6a5d;
-  --aba1-bleu: #4c6a5d;
-  --aba1-ivoire: #4c6a5d;
-  /* === PADDING SECTIONS === */
+  
+  /* === PADDING === */
   --section-padding-large: 112px;
   --section-padding-medium: 80px;
   --section-padding-small: 48px;
-  /* === PADDING PAGES === */
   --page-padding-global: 64px;
   --page-padding-mobile: 24px;
+  
   /* === ESPACEMENTS === */
   --gap-large: 80px;
   --gap-medium: 40px;
   --gap-small: 20px;
-  /* === LARGEUR CONTAINER === */
-  --Container-container-large:1280px;
-
+  
   /* === POLICES === */
   --font-family-primary: 'Playfair Display', serif;
   --font-family-secondary: 'Roboto', sans-serif;
-  --font-family-fallback: Arial, sans-serif;
   
   /* === TAILLES DE POLICE === */
   --font-size-hero: 60px;
-   --font-size-h1: 48px; 
+  --font-size-h1: 48px; 
   --font-size-desktop-title: 36px;
   --font-size-desktop-subtitle: 24px;
-  --font-size-tagphoto: 22px;
+  --font-size-tagline: 16px;
   --font-size-small: 14px;
-  --font-size-xsmall: 12px;
-  --font-size-xxsmall: 11px;
-  
-  /* === PESANTEURS DE POLICE === */
-  --font-weight-bold: 700;
-  --font-weight-semibold: 600;
-  --font-weight-normal: 400;
-  --font-weight-light: 300;
-  
-  /* === HAUTEURS DE LIGNE === */
-  --line-height-normal: normal;
-  --line-height-150: 150%;
 }
 
 * {
@@ -58,26 +39,30 @@
 body {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-  min-height: 6285px;
-  
+  min-height: 100vh;
 }
 
+/* === TEST === 
 .bordure_verte {
   border: 3px solid chartreuse;
 }
+.bordure_rouge {
+  border: 3px solid rgb(233, 3, 7);
+}*/
 
+/* === STYLES DE BASE === */
 .CadrenavBar {
   display: flex;
   width: 100%;
-  max-width: 1440px;
   height: 72px;
-  padding: var(--section-padding-large) var(--page-padding-global);
+  padding: 20px var(--page-padding-global);
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-large);
+  justify-content: center;
   background: var(--basecouleurs-oba-marron);
 }
 
@@ -88,220 +73,121 @@ body {
 
 .cadre-sous-image {
   display: flex;
-  height: 1177px;
-  max-width: var(--Container-container-large);
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
-  flex-shrink: 0;
-  align-self: stretch;
-  margin: 0 auto;
+  gap: var(--gap-medium);
+  padding: 0 var(--page-padding-mobile);
 }
 
 .cadre1-cadre-sous-image {
   display: flex;
-  height: 320px;
-  width:  768px;
+  width: 100%;
+  max-width: 768px;
   flex-direction: column;
   align-items: center;
-  gap: 32px;
+  gap: var(--gap-small);
+  text-align: center;
 }
 
-/* Styles de texte avec variables */
+/* === TYPOGRAPHIE === */
 .bouton-patrimoine,
 .deux-boutons {
-  color: var(--basecouleurs-oba-ivoire, #F8F5F0);
+  color: var(--basecouleurs-oba-ivoire);
   text-align: center;
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-tagline);
-  font-weight: var(--font-weight-semibold);
-  line-height: var(--line-height-150);
+  font-weight: 600;
+  line-height: 150%;
 }
-
-.essencedelart ,
-.obacapture 
-{
-  text-align: center;
-  font-size: var(--font-size-desktop-title);
-}
-
-.font-decouvrez {
-  text-align: center;
-  font-size: var(--font-size-hero);
-}
-
-.tresors-masqués {
-  font-size: var(--font-size-desktop-title);
-  width: 340px; 
-  height: 48px;
-  flex-shrink: 0;
-  aspect-ratio: 283/48;
-}
-
-.unvoyage {
-width: 620px;
-height: 32px;
-flex-shrink: 0;
-aspect-ratio: 597/32;
-margin-bottom: 2%;
-}
-
-.unvoyage,
-.tresors-masqués {
-  text-align: left;
-  margin-left: 2.5%;
-  margin-top: 2.5%;
-}
-
-.galerieOBA {
-  height: 128px;}
 
 .essencedelart,
 .tresors-masqués,
 .obacapture,
-.galerieOBA , 
-.unvoyage ,
-.font-decouvrez  {
+.galerieOBA, 
+.unvoyage,
+.font-decouvrez {
   color: var(--basecouleurs-oba-ivoire);
   font-family: var(--font-family-primary);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-normal);
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
 }
 
-.galerieOBA , 
+.essencedelart,
+.tresors-masqués,
+.obacapture {
+  font-size: var(--font-size-desktop-title);
+}
+
+.galerieOBA, 
 .unvoyage {
   font-size: var(--font-size-desktop-subtitle);
 }
 
-
-.deux-boutons {
-  width: 228px;
-  height: 48px;
+.font-decouvrez {
+  font-size: var(--font-size-hero);
 }
 
+.unvoyage,
+.tresors-masqués {
+  width: 100%;
+  max-width: 620px;
+  padding-bottom: 20px;
+  margin: 0 auto;
+}
+
+/* === IMAGES === */
 .placeholder-image {
   display: flex;
   width: 100%;
 }
 
 .image-grande {
-  height: 738px;
-  flex-shrink: 0;
-  object-fit: contain;
   width: 100%;
-  align-self: stretch;
+  height: auto;
+  max-height: 500px;
+  object-fit: cover;
 }
 
-.cadre-noir-galerie {
-  display: inherit;
-  flex-direction: column;
-  border: 1px solid #000;
-width: 106% ;
-max-width: 1357px;
-  height: 1050px;
-  flex-shrink: 0;
-  box-sizing: border-box;
-  box-shadow:  0 4px 4px 0 rgba(0, 0, 0, 0.25);
- /* margin: 0 auto;*/
-}
-
-.CadreGrandHaut {
-  display: flex;
-  width: 106%;
-  max-width: 1440px;
-  min-height: 2755px;
-  padding: var(--section-padding-large) var(--page-padding-global);
-  flex-direction: column;
-  align-items: center;
-  gap: var(--gap-large);
-  background: var(--basecouleurs-oba-marron);
-  margin: 0 auto;
-}
-
-.cadre_decouvrez {
-  display: flex;
-  width: 100%;
-  max-width: 1440px;
-  min-height: 762px;
-  padding: var(--section-padding-large) var(--page-padding-global);
-  flex-direction: column;
-  align-items: center;
-  gap: var(--gap-large);
-  background: var(--basecouleurs-oba-marron);
-}
-
-.sous-cadre_decouvrez {
-  display: flex;
-  height: 510px;
-  width:  768px;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-}
-
-
-.cadre-bouton-decouvrez {
-  height: 50px;
-  width: 275px;
-  display: flex;
-  align-items: flex-start;
-  gap: 16px;
-}
-
-.cadre_témoignages {
-  display: flex;
-  width: 100%;
-  max-width: 1440px;
-  min-height: 610px;
-  padding: var(--section-padding-large) var(--page-padding-global);
-  flex-direction: column;
-  align-items: center;
-  gap: var(--gap-large);
-  background: var(--basecouleurs-oba-marron);
-}
-
-.cadre_contactez_map {
-  display: flex;
-  width: 100%;
-  max-width: 1440px;
-  min-height: 1232px;
-  padding: var(--section-padding-large) var(--page-padding-global);
-  flex-direction: column;
-  align-items: center;
-  gap: var(--gap-large);
-  background: var(--basecouleurs-oba-marron);
-}
-
+/* === CADRES PRINCIPAUX === */
+.CadreGrandHaut,
+.cadre_decouvrez,
+.cadre_témoignages,
+.cadre_contactez_map,
 .cadre_bottom {
   display: flex;
   width: 100%;
-  max-width: 1440px;
-  min-height: 828px;
-  padding: var(--section-padding-large) var(--page-padding-global);
   flex-direction: column;
   align-items: center;
-  gap: var(--gap-large);
+  padding: var(--section-padding-medium) var(--page-padding-global);
+  gap: var(--gap-medium);
   background: var(--basecouleurs-oba-marron);
 }
 
-/* Galerie */
+.cadre-noir-galerie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: var(--gap-small);
+  background: var(--basecouleurs-oba-marron);
+}
+
+/* === GALERIE === */
 .gallery {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 96%;
-  max-width: 1280px;
-  margin: 0 auto;
+  width: 100%;
   gap: 10px;
 }
 
 .photo {
   width: calc(25% - 10px);
-  height: 390px;
+  height: 300px;
   overflow: hidden;
   position: relative;
-  flex-shrink: 0;
-  border-radius: 16px
 }
 
 .photo img {
@@ -311,14 +197,7 @@ max-width: 1357px;
   transition: all 0.3s ease;
 }
 
-/* Effet hover avec légende */
-.photo:hover img {
-  transform: scale(1.1);
-  filter: brightness(0.8);
-}
-
-.photo::after {
-  content: attr(class);
+.legende {
   position: absolute;
   bottom: -40px;
   left: 0;
@@ -330,81 +209,121 @@ max-width: 1357px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: var(--font-family-fallback);
-  font-size: var(--font-size-desktop-title);
-  font-weight: var(--font-weight-bold);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-small);
+  font-weight: 600;
   transition: bottom 0.3s ease;
   padding: 0 10px;
-  box-sizing: border-box;
 }
 
-.photo:hover::after {
+.photo:hover .legende {
   bottom: 0;
 }
 
-/* === RESPONSIVE GALERIE === */
-
-/* Tablet - 3 photos par ligne */
-@media (max-width: 1024px) {
-  .photo {
-    width: calc(33.333% - 10px);
-    height: 350px;
+/* === RESPONSIVE 375px === */
+@media (max-width: 375px) {
+  body {
+    min-height: auto;
   }
   
+  .CadrenavBar {
+    height: 60px;
+    padding: 15px 20px;
+  }
+  
+  .CadreGrandHaut,
+  .cadre_decouvrez,
+  .cadre_témoignages,
+  .cadre_contactez_map,
+  .cadre_bottom {
+    padding: 30px 20px;
+    gap: 30px;
+  }
+  
+  .cadre-sous-image {
+    gap: 30px;
+    padding: 0 15px;
+  }
+  
+  .cadre1-cadre-sous-image {
+    gap: 20px;
+  }
+  
+  /* TYPO REDUITE */
+  .font-decouvrez {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+  
+  .essencedelart,
+  .tresors-masqués,
+  .obacapture {
+    font-size: 22px;
+  }
+  
+  .galerieOBA {
+    font-size: 16px;
+    line-height: 1.4;
+    height: auto;
+  }
+  
+  .unvoyage {
+    font-size: 18px;
+  }
+  
+  .bouton-patrimoine,
+  .deux-boutons {
+    font-size: 14px;
+  }
+  
+  .image_OBAxx {
+    width: 200px;
+  }
+  
+  .image-grande {
+    max-height: 300px;
+  }
+  
+  .cadre-noir-galerie {
+    padding: 20px;
+    gap: 20px;
+  }
+  
+  /* GALERIE 1 PHOTO PAR LIGNE */
   .gallery {
-    max-width: 1000px;
-    gap: 8px;
-  }
-}
-
-/* Mobile - 2 photos par ligne */
-@media (max-width: 768px) {
-  .photo {
-    width: calc(50% - 8px);
-    height: 300px;
+    flex-direction: column;
+    gap: 15px;
   }
   
-  .gallery {
-    gap: 8px;
-    padding: 0 10px;
-  }
-  
-  .photo::after {
-    height: 35px;
-    bottom: -35px;
-    font-size: var(--font-size-xsmall);
-  }
-}
-
-/* Petit Mobile - 375px */
-@media (max-width: 480px) {
   .photo {
-    width: calc(50% - 6px);
+    width: 100%;
     height: 250px;
   }
   
-  .gallery {
-    gap: 6px;
-    padding: 0 8px;
+  .legende {
+    height: 35px;
+    bottom: -35px;
+    font-size: 13px;
   }
   
-  .photo::after {
-    height: 30px;
-    bottom: -30px;
-    font-size: var(--font-size-xxsmall);
+  .unvoyage,
+  .tresors-masqués {
+    padding-bottom: 15px;
   }
 }
 
-/* Très petit mobile - 1 photo par ligne */
-@media (max-width: 375px) {
+/* === TABLETTE === */
+@media (max-width: 768px) and (min-width: 376px) {
   .photo {
-    width: 100%;
+    width: calc(50% - 10px);
     height: 280px;
-    margin-bottom: 8px;
   }
-  
-  .gallery {
-    gap: 0;
-    flex-direction: column;
+}
+
+/* === DESKTOP === */
+@media (min-width: 769px) {
+  .photo {
+    width: calc(25% - 10px);
+    height: 300px;
   }
 }
