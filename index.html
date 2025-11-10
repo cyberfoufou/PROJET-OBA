@@ -12,15 +12,6 @@
     <div class="CadrenavBar bordure_verte">
         <nav>
             <!-- Contenu de la navigation -->
-            <div class="nav-links">
-            <a href="#collections">Collections</a>
-            <a href="#expositions">Expositions</a>
-            <a href="#services">Services ▼</a>
-        </div>
-        <div class="logo">
-            <img src="logo-header.png" alt="OBA Logo">
-        </div>
-        <button class="menu-btn">Menu</button>
         </nav>
     </div>
 
@@ -91,19 +82,21 @@
         <!-- Contenu de la section haute -->
     </div>
 
-    <!-- Section Découvrez --> <!-- Contenu de la section découvrez -->
+    <!-- Section Découvrez --> 
     <div class="cadre_decouvrez bordure_rouge">
-                    <div class="sous-cadre_decouvrez bordure_verte"> 
-                <div class="font-decouvrez bordure_verte">Découvrez l'âme des masques africains à la Galerie OBA</div>
-                <div class="obacapture bordure_verte">La Galerie OBA capture l'âme profonde des traditions 
-                    africaines à travers une collection unique de masques ancestraux. Chaque pièce représente 
-                    un dialogue silencieux entre l'histoire et l'expression artistique.</div>
-                    
-                    </div>
-                  <div class="cadre-bouton-decouvrez  bordure_verte">Patrimoine</div>              
+    
+                          <div class="cadre-sous-image bordure_verte ">
+            <!-- Sous cadre -->
+            <div class="cadre1-cadre-sous-image bordure_verte"> 
+                <div class="essencedelart bordure_verte">Découvrez l'âme des masques africains à la Galerie OBA</div>
+                <div class="galerieOBA bordure_verte">Plongez dans un univers artistique unique où chaque masque 
+                    raconte une histoire ancestrale. 
+                    Explorez notre collection rare de trésors culturels d'Afrique.</div>
+                <div class="deux-boutons bordure_verte">Patrimoine</div>
+            </div>
+             </div>        
     </div>
 
-    <!-- Section Témoignages -->
 <!-- Section Témoignages -->
 <div class="cadre_temoignages">
     <h2 class="titre-temoignages">Témoignages</h2>
@@ -114,34 +107,37 @@
         <div class="container-temoignages">
         <!-- Témoignage 1 -->
         <div class="temoignage">
+             <p class="auteur">Webflow</p>
             <div class="photo-temoin">
                 <img src="images/temoin-1.svg" alt="Photo témoin Webflow">
             </div>
             <div class="content-temoignage">
                 <p class="citation">"Un voyage extraordinaire à travers l'histoire et la culture africaine."</p>
-                <p class="auteur">Webflow</p>
+               
             </div>
         </div>
+        <!
         
         <!-- Témoignage 2 -->
         <div class="temoignage">
+             <p class="auteur">Netflix</p>
             <div class="photo-temoin">
                 <img src="images/temoin-2.svg" alt="Photo témoin 2">
             </div>
             <div class="content-témoignage">
                 <p class="citation">"Des masques qui racontent des histoires plus profondes que les mots."</p>
-                <p class="auteur">Netflix</p>
             </div>
         </div>
         
         <!-- Témoignage 3 -->
         <div class="temoignage">
+            <p class="auteur">Abbey Road</p>
             <div class="photo-temoin">
                 <img src="images/temoin-3.svg" alt="Photo témoin Webflow">
             </div>
             <div class="content-temoignage">
                 <p class="citation">"Une expérience muséale unique et immersive."</p>
-                <p class="auteur">Abbey Road</p>
+
             </div>
         </div>
         
@@ -149,26 +145,81 @@
         </div>
 </div>
 
-    <!-- Section Contact + Map -->
-    <div class="cadre_contactez_map bordure_rouge">
-        <h2>Contactez-nous</h2>
-        <!-- Contenu contact et carte -->
+<!-- Section Contact + Map -->
+<!-- Section Contact + Map -->
+<div class="cadre_contactez_map bordure_rouge">
+    <div class="contact-wrapper bordure_rouge">
+        <div class="contact-top">
+            <div class="contact-left">
+                <div class="contact-label">Contact</div>
+                <h2 class="contact-title">Contactez-nous</h2>
+                <p class="contact-description">
+                    Nous sommes impatients de répondre à vos questions et de partager notre passion pour l'art africain.
+                </p>
+            </div>
+            
+            <div class="contact-right bordure_verte">
+                <div class="info-item">
+                    <div class="info-icon">✉</div>
+                    <div class="info-content">
+                        <p class="info-label">Email</p>
+                        <a href="mailto:contact@galerieoba.fr" class="info-text">contact@galerieoba.fr</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">☎</div>
+                    <div class="info-content">
+                        <p class="info-label">Téléphone</p>
+                        <a href="tel:+33123456789" class="info-text">+33 1 23 45 67 89</a>
+                    </div>
+                </div>
+                
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div class="info-content">
+                        <p class="info-label">Adresse</p>
+                        <p class="info-text">12 rue des Arts, 75008 Paris, France</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Carte en dessous -->
+        <div class="contact-map-section">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.9921267003367!2d2.2945!3d48.8566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e2964e34e2d%3A0x8ddca9ee380ef7e0!2s12%20Rue%20des%20Arts%2C%2075001%20Paris!5e0!3m2!1sfr!2sfr!4v1234567890"
+                width="100%"
+                height="400"
+                style="border: none; border-radius: 8px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
     </div>
+    
+    <!-- Newsletter -->
+    <div class="newsletter-section">
+        <div class="newsletter-content">
+            <h3 class="newsletter-title">Rejoignez notre newsletter</h3>
+            <p class="newsletter-subtitle">Recevez les dernières actualités et invitations exclusives</p>
+        </div>
+        
+        <div class="newsletter-form">
+            <input type="email" placeholder="Votre email" class="newsletter-input">
+            <button class="newsletter-button">Envoyer</button>
+        </div>
+    </div>
+    
+    <div class="divider"></div>
+</div>
+
 
     <!-- Section Bottom / Footer -->
     <div class="cadre_bottom bordure_rouge">
         <footer>
             <!-- Contenu du footer -->
-            <div class="newsletter-container">
-    <div class="newsletter-text">
-        <h2>Rejoignez notre newsletter</h2>
-        <p>Recevez les dernières actualités et invitations exclusives</p>
-    </div>
-    <form class="newsletter-form">
-        <input type="email" placeholder="Votre email" required>
-        <button type="submit">Envoyer</button>
-    </form>
-</div>
         </footer>
     </div>
 </body>

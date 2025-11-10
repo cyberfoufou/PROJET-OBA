@@ -4,38 +4,35 @@
   --basecouleurs-oba-brunclair: #c7a14a;
   --basecouleurs-oba-bleu: #e1e1e1;
   --basecouleurs-oba-ivoire: #f8f3f0;
-  
   /* === PADDING === */
   --section-padding-large: 112px;
   --section-padding-medium: 80px;
   --section-padding-small: 48px;
   --page-padding-global: 64px;
   --page-padding-mobile: 24px;
-  
   /* === ESPACEMENTS === */
   --gap-large: 80px;
   --gap-medium: 40px;
   --gap-small: 20px;
-  
   /* === POLICES === */
   --font-family-primary: 'Playfair Display', serif;
   --font-family-secondary: 'Roboto', sans-serif;
-  
   /* === TAILLES DE POLICE === */
   --font-size-hero: 60px;
-  --font-size-h1: 48px; 
+  --font-size-h1: 48px;
   --font-size-desktop-title: 36px;
   --font-size-desktop-subtitle: 24px;
   --font-size-tagline: 16px;
   --font-size-small: 14px;
+  /* === POIDS DE POLICE === */
+  --font-weight-bold: 700;
+  --font-weight-semibold: 600;
 }
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   display: flex;
   flex-direction: column;
@@ -45,7 +42,6 @@ body {
   margin: 0 auto;
   min-height: 100vh;
 }
-
 /*=== TEST === */
 .bordure_verte {
   border: 1px solid chartreuse;
@@ -53,7 +49,6 @@ body {
 .bordure_rouge {
   border: 2px solid rgb(233, 3, 7);
 }
-
 /* === STYLES DE BASE === */
 .CadrenavBar {
   display: flex;
@@ -65,12 +60,10 @@ body {
   justify-content: center;
   background: var(--basecouleurs-oba-marron);
 }
-
 .image_OBA {
   width: 257px;
   height: auto;
 }
-
 .cadre-sous-image {
   display: flex;
   width: 100%;
@@ -79,7 +72,6 @@ body {
   gap: var(--gap-medium);
   padding: 0 var(--page-padding-mobile);
 }
-
 .cadre1-cadre-sous-image {
   display: flex;
   width: 100%;
@@ -89,7 +81,6 @@ body {
   gap: var(--gap-small);
   text-align: center;
 }
-
 /* === TYPOGRAPHIE === */
 .bouton-patrimoine,
 .deux-boutons {
@@ -100,11 +91,10 @@ body {
   font-weight: 600;
   line-height: 150%;
 }
-
 .essencedelart,
-.tresors-masquÃ©s,
+.tresors-masqués,
 .obacapture,
-.galerieOBA, 
+.galerieOBA,
 .unvoyage,
 .font-decouvrez {
   color: var(--basecouleurs-oba-ivoire);
@@ -113,47 +103,40 @@ body {
   line-height: normal;
   text-align: center;
 }
-
 .essencedelart,
-.tresors-masquÃ©s,
+.tresors-masqués,
 .obacapture {
   font-size: var(--font-size-desktop-title);
 }
-
-.galerieOBA, 
+.galerieOBA,
 .unvoyage {
   font-size: var(--font-size-desktop-subtitle);
 }
-
 .font-decouvrez {
   font-size: var(--font-size-hero);
 }
-
 .unvoyage,
-.tresors-masquÃ©s {
+.tresors-masqués {
   width: 100%;
   max-width: 620px;
   padding-bottom: 20px;
   margin: 0 auto;
 }
-
 /* === IMAGES === */
 .placeholder-image {
   display: flex;
   width: 100%;
 }
-
 .image-grande {
   width: 100%;
   height: auto;
   max-height: 500px;
   object-fit: cover;
 }
-
 /* === CADRES PRINCIPAUX === */
 .CadreGrandHaut,
 .cadre_decouvrez,
-.cadre_tÃ©moignages,
+.cadre_temoignages,
 .cadre_contactez_map,
 .cadre_bottom {
   display: flex;
@@ -163,8 +146,8 @@ body {
   padding: var(--section-padding-medium) var(--page-padding-global);
   gap: var(--gap-medium);
   background: var(--basecouleurs-oba-marron);
+  max-width: 1024px;
 }
-
 .cadre-noir-galerie {
   display: flex;
   flex-direction: column;
@@ -173,7 +156,6 @@ body {
   padding: var(--gap-small);
   background: var(--basecouleurs-oba-marron);
 }
-
 /* === GALERIE === */
 .gallery {
   display: flex;
@@ -182,21 +164,18 @@ body {
   width: 100%;
   gap: 10px;
 }
-
 .photo {
   width: calc(25% - 10px);
   height: 300px;
   overflow: hidden;
   position: relative;
 }
-
 .photo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: all 0.3s ease;
 }
-
 .legende {
   position: absolute;
   bottom: -40px;
@@ -215,260 +194,341 @@ body {
   transition: bottom 0.3s ease;
   padding: 0 10px;
 }
-
 .photo:hover .legende {
   bottom: 0;
 }
-
-
 /* === SECTION TEMOIGNAGES === */
 .titre-temoignages {
-    color: var(--basecouleurs-oba-ivoire);
-    font-family: var(--font-family-primary);
-    font-size: var(--font-size-desktop-title);
-    font-weight: var(--font-weight-bold);
-    text-align: center;
-    margin-bottom: 20px;
+  color: var(--basecouleurs-oba-ivoire);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-desktop-title);
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.sous-titre-temoignages {
+  color: var(--basecouleurs-oba-ivoire);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-desktop-subtitle);
+  text-align: center;
+  margin-bottom: 40px;
+}
+.separateur {
+  width: 100px;
+  height: 2px;
+  background: var(--basecouleurs-oba-brunclair);
+  margin: 0 auto 60px auto;
+}
+.container-temoignages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  width: 100%;
+  max-width: 1280px;
+  
+}
+.temoignage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+.photo-temoin {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--basecouleurs-oba-brunclair);
+}
+.photo-temoin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.content-temoignage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.citation {
+  color: var(--basecouleurs-oba-ivoire);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-tagline);
+  font-style: italic;
+  line-height: 1.6;
+  margin: 0;
+}
+.auteur {
+  color: var(--basecouleurs-oba-brunclair);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-tagline);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+}
+.auteur-seul {
+  color: var(--basecouleurs-oba-ivoire);
+  font-family: var(--font-family-primary);
+  font-size: var(--font-size-desktop-subtitle);
+  font-weight: var(--font-weight-bold);
+  margin: 0;
+}
+.fonction {
+  color: var(--basecouleurs-oba-brunclair);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-tagline);
+  margin: 0;
 }
 
-.sous-titre-temoignages {
+/* === SECTION CONTACT === */
+.contact-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contact-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--gap-large);
+    width: 100%;
+}
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    /*gap: var(--gap-small);*/
+    justify-content: flex-start;
+}
+
+.contact-label {
+    color: var(--basecouleurs-oba-ivoire);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-tagline);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-title {
+    color: var(--basecouleurs-oba-ivoire);
+    font-family: var(--font-family-primary);
+    font-size: var(--font-size-h1);
+    font-weight: 700;
+    margin: 0;
+}
+
+.contact-description {
     color: var(--basecouleurs-oba-ivoire);
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-desktop-subtitle);
-    text-align: center;
-    margin-bottom: 40px;
+    line-height: 1.6;
+    margin: 20px 0 0 0;
 }
 
-.separateur {
-    width: 100px;
-    height: 2px;
-    margin: 0 auto 60px auto;
-}
-
-.container-temoignages {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    width: 100%;
-    max-width: 1280px;
-}
-
-.temoignage {
+.contact-right {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-      max-width: 1280px;
+    align-self: center;
+    gap: 30px;
 }
 
-.photo-temoin {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    overflow: hidden;
+.info-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 34px;
+    color: var(--basecouleurs-oba-ivoire);
+    min-width: 30px;
+    text-align: center;
+}
+
+.info-content {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.info-label {
+    color: var(--basecouleurs-oba-ivoire);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-tagline);
+    font-weight: 600;
+    margin: 0;
+}
+
+.info-text {
+    color: var(--basecouleurs-oba-ivoire);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-tagline);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-text:hover {
+    color: var(--basecouleurs-oba-brunclair);
+}
+
+.contact-map-section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-map-section iframe {
+    width: 100%;
+    max-width: 1200px;
+    height: 400px;
+    border-radius: 8px;
     border: 3px solid var(--basecouleurs-oba-brunclair);
 }
 
-.photo-temoin img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.content-temoignage {
+/* === NEWSLETTER === */
+.newsletter-section {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 40px;
 }
 
-.citation {
-    color: var(--basecouleurs-oba-ivoire);
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-tagline);
-    font-style: italic;
-    line-height: 1.6;
-    margin: 0;
+.newsletter-content {
+    text-align: left;
 }
 
-.auteur {
-    color: var(--basecouleurs-oba-brunclair);
-    font-family: var(--font-family-secondary);
-    font-size: var(--font-size-tagline);
-    font-weight: var(--font-weight-semibold);
-    margin: 0;
-}
-
-.auteur-seul {
+.newsletter-title {
     color: var(--basecouleurs-oba-ivoire);
     font-family: var(--font-family-primary);
-    font-size: var(--font-size-desktop-subtitle);
-    font-weight: var(--font-weight-bold);
-    margin: 0;
+    font-size: var(--font-size-desktop-title);
+    font-weight: 700;
+    margin: 0 0 10px 0;
 }
 
-.fonction {
+.newsletter-subtitle {
+    color: var(--basecouleurs-oba-ivoire);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-desktop-subtitle);
+    margin: 0;
+    opacity: 0.9;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.newsletter-input {
+    flex: 1;
+    padding: 15px 20px;
+    background: transparent;
+    border: 2px solid var(--basecouleurs-oba-brunclair);
+    border-radius: 4px;
+    color: var(--basecouleurs-oba-ivoire);
+    font-family: var(--font-family-secondary);
+    font-size: var(--font-size-tagline);
+    transition: border-color 0.3s ease;
+}
+
+.newsletter-input::placeholder {
+    color: var(--basecouleurs-oba-ivoire);
+    opacity: 0.7;
+}
+
+.newsletter-input:focus {
+    outline: none;
+    border-color: var(--basecouleurs-oba-ivoire);
+}
+
+.newsletter-button {
+    padding: 15px 40px;
+    background: transparent;
+    border: 2px solid var(--basecouleurs-oba-brunclair);
     color: var(--basecouleurs-oba-brunclair);
     font-family: var(--font-family-secondary);
     font-size: var(--font-size-tagline);
-    margin: 0;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.newsletter-button:hover {
+    background: var(--basecouleurs-oba-brunclair);
+    color: var(--basecouleurs-oba-marron);
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background: var(--basecouleurs-oba-brunclair);
+    opacity: 0.3;
+    margin-top: 40px;
 }
 
 /* === RESPONSIVE 375px === */
 @media (max-width: 375px) {
-  body {
-    min-height: auto;
-  }
-  
-  .CadrenavBar {
-    height: 60px;
-    padding: 15px 20px;
-  }
-  
-  .CadreGrandHaut,
-  .cadre_decouvrez,
-  .cadre_tÃ©moignages,
-  .cadre_contactez_map,
-  .cadre_bottom {
-    padding: 30px 20px;
-    gap: 30px;
-  }
-  
-  .cadre-sous-image {
-    gap: 30px;
-    padding: 0 15px;
-  }
-  
-  .cadre1-cadre-sous-image {
-    gap: 20px;
-  }
-  
-  /* TYPO REDUITE */
-  .font-decouvrez {
-    font-size: 28px;
-    line-height: 1.2;
-  }
-  
-  .essencedelart,
-  .tresors-masquÃ©s,
-  .obacapture {
-    font-size: 22px;
-  }
-  
-  .galerieOBA {
-    font-size: 16px;
-    line-height: 1.4;
-    height: auto;
-  }
-  
-  .unvoyage {
-    font-size: 18px;
-  }
-  
-  .bouton-patrimoine,
-  .deux-boutons {
-    font-size: 14px;
-  }
-  
-  .image_OBAxx {
-    width: 200px;
-  }
-  
-  .image-grande {
-    max-height: 300px;
-  }
-  
-  .cadre-noir-galerie {
-    padding: 20px;
-    gap: 20px;
-  }
-  
-    .titre-temoignages {
-        font-size: 24px;
+    .contact-wrapper {
+        gap: 40px;
     }
     
-    .sous-titre-temoignages {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-    
-    .separateur {
-        margin-bottom: 40px;
-    }
-    
-    .container-temoignages {
+    .contact-top {
+        grid-template-columns: 1fr;
         gap: 30px;
     }
     
-    .photo-temoin {
-        width: 80px;
-        height: 80px;
+    .contact-title {
+        font-size: 28px;
     }
     
-    .citation {
+    .contact-description {
+        font-size: 16px;
+    }
+    
+    .contact-right {
+        gap: 25px;
+    }
+    
+    .info-label {
         font-size: 14px;
     }
     
-    .auteur,
-    .fonction {
+    .info-text {
         font-size: 14px;
     }
     
-    .auteur-seul {
-        font-size: 18px;
+    .contact-map-section iframe {
+        height: 300px;
     }
     
-  /* GALERIE 1 PHOTO PAR LIGNE */
-  .gallery {
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .photo {
-    width: 100%;
-    height: 250px;
-  }
-  
-  .legende {
-    height: 35px;
-    bottom: -35px;
-    font-size: 13px;
-  }
-  
-  .unvoyage,
-  .tresors-masquÃ©s {
-    padding-bottom: 15px;
-  }
-}
-
-/* === TABLETTE === */
-@media (max-width: 768px) and (min-width: 376px) {
-  .photo {
-    width: calc(50% - 10px);
-    height: 280px;
-  }
-}
-
-  .container-temoignages {
-        grid-template-columns: 1fr;
-        gap: 40px;
-        max-width: 500px;
+    .newsletter-section {
+        gap: 25px;
+        margin-top: 30px;
     }
     
-    .temoignage {
-        gap: 15px;
+    .newsletter-title {
+        font-size: 22px;
     }
     
-    .photo-temoin {
-        width: 100px;
-        height: 100px;
+    .newsletter-subtitle {
+        font-size: 14px;
     }
-
-
-/* === DESKTOP === */
-@media (min-width: 769px) {
-  .photo {
-    width: calc(25% - 10px);
-    height: 300px;
-  }
+    
+    .newsletter-form {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .newsletter-input,
+    .newsletter-button {
+        padding: 12px 15px;
+        font-size: 14px;
+        width: 100%;
+    }
 }
