@@ -1,7 +1,7 @@
 :root {
   /* === COULEURS === */
   --basecouleurs-oba-marron: #8b5e3c;
-  --basecouleurs-oba-brunclair: #c7a14a;
+  --basecouleurs-oba-brunclair: #927a68;
   --basecouleurs-oba-bleu: #e1e1e1;
   --basecouleurs-oba-ivoire: #f8f3f0;
   
@@ -34,6 +34,7 @@
   --font-weight-semibold: 600;
 }
 
+
 * {
   margin: 0;
   padding: 0;
@@ -50,20 +51,20 @@ body {
   min-height: 100vh;
 }
 
-/*=== TEST === */
+/*=== TEST === 
 .bordure_verte {
   border: 1px solid chartreuse;
 }
 
 .bordure_rouge {
   border: 2px solid rgb(233, 3, 7);
-}
+}*/
 
 /* === STYLES DE BASE === */
 .CadrenavBar {
   display: flex;
   width: 100%;
-  height: 72px;
+  /*height: 72px;*/
   padding: 0;
   flex-direction: column;
   align-items: center;
@@ -159,6 +160,7 @@ body {
 }
 
 /* === CADRES PRINCIPAUX === */
+
 .CadreGrandHaut,
 .cadre_decouvrez,
 .cadre_temoignages,
@@ -180,6 +182,7 @@ body {
   width: 100%;
   padding: var(--gap-small);
   background: var(--basecouleurs-oba-marron);
+  border: 1px ;
 }
 
 /* === GALERIE === */
@@ -196,6 +199,7 @@ body {
   height: 300px;
   overflow: hidden;
   position: relative;
+  border-radius: 16px;
 }
 
 .photo img {
@@ -211,7 +215,8 @@ body {
   left: 0;
   width: 100%;
   height: 40px;
-  background: rgba(161, 98, 68, 0.85);
+  background: var(--basecouleurs-oba-brunclair);
+  opacity: 66%;
   color: white;
   text-align: center;
   display: flex;
@@ -233,7 +238,7 @@ body {
   display: flex;
   width: 100%;
   height: 100%;
-  padding: 0 var(--page-padding-global);
+  padding: 0 var(--page-padding-mobile);
   align-items: center;
   justify-content: space-between;
   gap: var(--gap-medium);
@@ -247,9 +252,9 @@ body {
 
 .navbar-center {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .navbar-right {
@@ -594,6 +599,45 @@ body {
   border-radius: 8px;
   border: 3px solid var(--basecouleurs-oba-brunclair);
 }
+
+
+    .button-container {
+      display: flex;
+      gap: 20px;
+    }
+
+.btn {
+      font-size: 1rem;
+      padding: 10px 28px;
+      border-radius: 0;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      letter-spacing: 0.5px;
+    }
+
+    /* Bouton clair */
+    .btn-explorer {
+      background-color: #F5EEE7; /* beige clair */
+      color: #6B4428; /* brun du texte */
+      border: 1px solid #F5EEE7;
+    }
+
+    .btn-explorer:hover {
+      background-color: #e9ded2;
+    }
+
+    /* Bouton transparent avec bordure */
+    .btn-reserver {
+      background: transparent;
+      color: #F5EEE7;
+      border: 1px solid #F5EEE7;
+    }
+
+    .btn-reserver:hover {
+      background: #F5EEE7;
+      color: #6B4428;
+    }
 
 /* === NEWSLETTER === */
 .newsletter-section {
