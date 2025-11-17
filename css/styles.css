@@ -51,14 +51,14 @@ body {
   min-height: 100vh;
 }
 
-/*=== TEST === */
+/*=== TEST === 
 .bordure_verte {
   border: 1px solid chartreuse;
 }
 
 .bordure_rouge {
   border: 2px solid rgb(233, 3, 7);
-}
+}*/
 
 /* === STYLES DE BASE === */
 .CadrenavBar {

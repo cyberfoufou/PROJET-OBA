@@ -1,0 +1,11 @@
+Balises sémantiques
+Réduire taille polices 
+Descendre à 320px
+Centrer W3C
+
+Ancres ?? Menu
+
+Passer sous light house
+
+
+
