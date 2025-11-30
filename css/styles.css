@@ -1,3 +1,12 @@
+/*=== TEST === 
+.bordure_verte {
+  border: 1px solid chartreuse;
+}
+
+.bordure_rouge {
+  border: 2px solid rgb(233, 3, 7);
+} */
+
 :root {
   /* === COULEURS === */
   --basecouleurs-oba-marron: #8b5e3c;
@@ -25,10 +34,11 @@
   --font-size-hero: 60px;
   --font-size-h1: 48px;
   --font-size-h2: 30px;
-  --font-size-desktop-title: 36px;
+  --font-size-desktop-title: 32px;
   --font-size-desktop-subtitle: 24px;
   --font-size-tagline: 16px;
   --font-size-small: 14px;
+  --font-size-extrasmall: 12px; 
   
   /* === POIDS DE POLICE === */
   --font-weight-bold: 700;
@@ -100,8 +110,8 @@ body {
   line-height: 150%;
 }
 
-.essencedelart,
 .tresors-masqués,
+.essencedelart,
 .obacapture,
 .galerieOBA,
 .unvoyage,
@@ -113,14 +123,15 @@ body {
   text-align: center;
 }
 
+.tresors-masqués ,
 .essencedelart,
-.tresors-masqués,
 .obacapture {
-  font-size: var(--font-size-desktop-title);
+  font-size: var(--font-size-desktop-subtitle);
 }
 
 .galerieOBA,
-.unvoyage {
+.unvoyage 
+{
   font-size: var(--font-size-desktop-tagline);
 }
 
@@ -128,12 +139,23 @@ body {
   font-size: var(--font-size-hero);
 }
 
-.unvoyage,
-.tresors-masqués {
+
+.unvoyage
+{
+font: var(--font-family-primary);
+color: var(--basecouleurs-oba-ivoire);
+}
+
+
+
+.cadre-tresors-masqués {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
   width: 100%;
-  max-width: 620px;
-  padding-bottom: 20px;
-  margin: 0 auto;
+  padding: var(--gap-small);
+  background: var(--basecouleurs-oba-marron);
+  border: 1px ;
 }
 
 /* === IMAGES === */
@@ -690,13 +712,13 @@ body {
   font-family: var(--font-family-secondary);
   font-size: var(--font-size-desktop-tagline);
   font-weight: 700;
-  margin: 0 0 10px 0;
+  margin: 0 0 5px 0;
 }
 
 .newsletter-subtitle {
   color: var(--basecouleurs-oba-ivoire);
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-desktop-small);
+  font-size: var(--font-size-extrasmall);
   margin: 0;
   opacity: 0.9;
 }
