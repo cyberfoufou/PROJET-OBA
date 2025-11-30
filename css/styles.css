@@ -927,6 +927,7 @@ color: var(--basecouleurs-oba-ivoire);
   }
 }
 
+
 /* === RESPONSIVE TABLETTE (768px - 1024px) === */
 @media (max-width: 1024px) and (min-width: 768px) {
   .navbar-center {
@@ -961,40 +962,9 @@ color: var(--basecouleurs-oba-ivoire);
   .container-temoignages {
     grid-template-columns: repeat(2, 1fr);
   }
-/*. ajout °/
-* Inside your @media (max-width: 767px) query, add/override these for mobile hierarchy */
-.dropdown-menu {
-  display: none; /* Hidden by default */
-  position: relative; /* Flow in-line instead of absolute */
-  top: auto;
-  left: auto;
-  transform: none;
-  opacity: 1;
-  visibility: visible;
-  margin: 0;
-  padding: 0;
-  min-width: auto;
-  border: none;
-  box-shadow: none;
-  background: var(--basecouleurs-oba-marron); /* Match parent background */
-  transition: none; /* Optional: remove transition for instant open if preferred */
 }
 
-.submenu-toggle:checked + .dropdown-toggle + .dropdown-menu {
-  display: flex;
-  flex-direction: column;
-}
 
-.submenu-toggle:checked + .dropdown-toggle .dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-.dropdown-item {
-  padding-left: 30px; /* Indent sub-items for hierarchy */
-  text-align: left;
-}
-
-}
 
 /* === RESPONSIVE MOBILE (320px - 767px) === */
 @media (max-width: 767px) {
