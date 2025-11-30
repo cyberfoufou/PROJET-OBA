@@ -391,7 +391,7 @@ color: var(--basecouleurs-oba-ivoire);
 .mobile-menu {
   display: none;
   position: fixed;
-  top: 30px;
+  top: 46px;
   background: var(--basecouleurs-oba-marron);
   border: 1px solid var(--basecouleurs-oba-brunclair);
   border-radius: 4px;
@@ -402,9 +402,7 @@ color: var(--basecouleurs-oba-ivoire);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.menu-button:focus ~ .mobile-menu {
-  display: flex;
-}
+/* Removed :focus toggle (replaced with checkbox below) */
 
 .mobile-menu-item {
   display: block;
@@ -916,6 +914,15 @@ color: var(--basecouleurs-oba-ivoire);
   display: none;
 }
 
+/* Added: General toggle for sub-menu checkbox (works with HTML checkbox) */
+.submenu-toggle:checked + .dropdown-toggle + .dropdown-menu {
+  display: flex !important; /* Force display for sub-list */
+}
+
+.submenu-toggle:checked + .dropdown-toggle .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
 /* === RESPONSIVE DESKTOP (1024px +) === */
 @media (min-width: 1024px) {
   .navbar-center {
@@ -974,6 +981,7 @@ color: var(--basecouleurs-oba-ivoire);
   
   .navbar {
     padding: 0 16px;
+    justify-content: flex-start; /* FIX: Align menu button to the right */
   }
   
   .navbar-center {
@@ -995,6 +1003,11 @@ color: var(--basecouleurs-oba-ivoire);
   .menu-button {
     padding: 8px 16px;
     font-size: 14px;
+  }
+  
+  /* Added: Override main menu display for checkbox toggle (replaces :focus) */
+  .submenu-toggle#main-menu-toggle:checked ~ .mobile-menu {
+    display: flex;
   }
   
   .gallery {
@@ -1169,6 +1182,30 @@ color: var(--basecouleurs-oba-ivoire);
   
   .footer-copyright {
     font-size: 12px;
+  }
+
+  /* Added: Override dropdown for mobile (relative positioning, hidden by default, show on :checked) */
+  .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    margin: 0;
+    padding: 0;
+    min-width: auto;
+    border: none;
+    box-shadow: none;
+    background: var(--basecouleurs-oba-marron);
+    transition: none;
+  }
+
+  .dropdown-item {
+    padding-left: 60px; /* Indent sub-items for hierarchy */
+    text-align: left;
   }
 
   /* Limite minimale de 320px */
