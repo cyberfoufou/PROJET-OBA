@@ -702,7 +702,33 @@ body {
   gap: 15px;
   width: 100%;
 }
+.newsletter-form {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
 
+.newsletter-form input {
+  flex: 1;
+  padding: 15px 20px;
+  background: transparent;
+  border: 2px solid var(--basecouleurs-oba-brunclair);
+  border-radius: 4px;
+  color: var(--basecouleurs-oba-ivoire);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-tagline);
+  transition: border-color 0.3s ease;
+}
+
+.newsletter-form input::placeholder {
+  color: var(--basecouleurs-oba-ivoire);
+  opacity: 0.7;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+  border-color: var(--basecouleurs-oba-ivoire);
+}
 .newsletter-input {
   flex: 1;
   padding: 15px 20px;
@@ -1098,4 +1124,24 @@ body {
     height: 50px;
   }
   
+
   .footer-copyright {
+
+      font-size: 12px;
+  }
+
+  /* Limite minimale de 320px */
+  @supports (min-width: 320px) {
+    body {
+      min-width: 320px;
+    }
+  }
+}
+
+/* Prévention du scroll horizontal en dessous de 320px */
+@media (max-width: 319px) {
+  body {
+    width: 320px;
+    overflow-x: hidden;
+  }
+}
