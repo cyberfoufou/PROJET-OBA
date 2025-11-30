@@ -10,7 +10,7 @@
 </head>
 <body class="body bordure_rouge">
 
-<!-- Navigation Bar -->
+
 <!-- Navigation Bar -->
 <header class="CadrenavBar">
     <nav class="navbar" id="navbar">
@@ -34,26 +34,27 @@
         </div>
         
         <!-- Menu mobile (visible en responsive < 768px) -->
-            <button class="menu-button" tabindex="0">Menu</button>
         <div class="navbar-right">
-
- <div class="mobile-menu">
-  <a href="#newsletter" class="mobile-menu-item">Newsletter</a>
-  <a href="#gallery" class="mobile-menu-item">Galerie</a>
-  <input type="checkbox" id="services-toggle" class="submenu-toggle">
-  <label for="services-toggle" class="mobile-menu-item dropdown-toggle">
-    Services <span class="dropdown-arrow">▼</span>
-  </label>
-  <div class="dropdown-menu">
-    <a href="#tresor" class="dropdown-item">Trésors</a>
-    <a href="#temoignages" class="dropdown-item">Témoignages</a>
-    <a href="#carte" class="dropdown-item">Nous trouver</a>
-  </div>
-</div>
+            <button class="menu-button" tabindex="0">Menu</button>
+            <div class="mobile-menu">
+                <a href="#newsletter" class="mobile-menu-item">Newsletter</a>
+                <a href="#gallery" class="mobile-menu-item">Galerie</a>
+                
+                <!-- Dropdown Services -->
+                <div class="mobile-dropdown">
+                    <button class="mobile-dropdown-toggle">
+                        Services <span class="mobile-dropdown-arrow">▼</span>
+                    </button>
+                    <div class="mobile-dropdown-menu">
+                        <a href="#tresor" class="mobile-dropdown-item">Trésors</a>
+                        <a href="#temoignages" class="mobile-dropdown-item">Témoignages</a>
+                        <a href="#carte" class="mobile-dropdown-item">Nous trouver</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 </header>
-
     <!-- Section principale haute -->
     <div class="CadreGrandHaut bordure_rouge">
             <!-- Image -->
