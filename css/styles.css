@@ -674,7 +674,15 @@ body {
   gap: 15px;
   width: 100%;
 }
+.newsletter-form input[type="text"] {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
+}
 
+.newsletter-form input[type="text"]::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
 .newsletter-input {
   flex: 1;
   padding: 15px 20px;
