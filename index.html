@@ -34,15 +34,22 @@
         </div>
         
         <!-- Menu mobile (visible en responsive < 768px) -->
-        <div class="navbar-right">
             <button class="menu-button" tabindex="0">Menu</button>
-            <div class="mobile-menu">
-                <a href="#newsletter" class="mobile-menu-item">Newsletter</a>
-                <a href="#gallery" class="mobile-menu-item">Galerie</a>
-                <a href="#tresor" class="mobile-menu-item">Trésors</a>
-                <a href="#temoignages" class="mobile-menu-item">Témoignages</a>
-                <a href="#carte" class="mobile-menu-item">Nous trouver</a>
-            </div>
+        <div class="navbar-right">
+
+ <div class="mobile-menu">
+  <a href="#newsletter" class="mobile-menu-item">Newsletter</a>
+  <a href="#gallery" class="mobile-menu-item">Galerie</a>
+  <input type="checkbox" id="services-toggle" class="submenu-toggle">
+  <label for="services-toggle" class="mobile-menu-item dropdown-toggle">
+    Services <span class="dropdown-arrow">▼</span>
+  </label>
+  <div class="dropdown-menu">
+    <a href="#tresor" class="dropdown-item">Trésors</a>
+    <a href="#temoignages" class="dropdown-item">Témoignages</a>
+    <a href="#carte" class="dropdown-item">Nous trouver</a>
+  </div>
+</div>
         </div>
     </nav>
 </header>
@@ -240,8 +247,6 @@
         </div>
         
         <div class="newsletter-form">
-            <input type="text" placeholder="Votre prénom"  class="newsletter-input">
-             <input type="text" placeholder="Votre nom"  class="newsletter-input">
             <input type="email" placeholder="Votre email" class="newsletter-input">
             <button class="newsletter-button">Envoyer</button>
         </div>
