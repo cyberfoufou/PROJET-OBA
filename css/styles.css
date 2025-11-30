@@ -397,7 +397,7 @@ body {
   display: none;
   position: absolute;
   top: calc(100% + 8px);
-  right: -10px;
+  right: 10px;
   background: var(--basecouleurs-oba-marron);
   border: 1px solid var(--basecouleurs-oba-brunclair);
   border-radius: 4px;
@@ -928,7 +928,7 @@ body {
   }
 
   .mobile-menu {
-    right: -10px;
+    right: -110px;
     min-width: 180px;
   }
   
