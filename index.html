@@ -11,8 +11,10 @@
 <body class="body bordure_rouge">
 
 <!-- Navigation Bar -->
-<header class="CadrenavBar bordure_verte">
+<!-- Navigation Bar -->
+<header class="CadrenavBar">
     <nav class="navbar" id="navbar">
+        <!-- Menu desktop (caché en responsive) -->
         <div class="navbar-left">
             <a href="#newsletter" class="nav-link">Newsletter</a>
             <a href="#gallery" class="nav-link">Galerie</a>
@@ -26,12 +28,21 @@
             </div>
         </div>
         
+        <!-- Logo au centre -->
         <div class="navbar-center">
             <img src="images/logo-header.png" alt="Logo OBA" class="navbar-logo">
         </div>
-                
+        
+        <!-- Menu mobile (visible en responsive < 768px) -->
         <div class="navbar-right">
-            <button class="menu-button">Menu</button>
+            <button class="menu-button" tabindex="0">Menu</button>
+            <div class="mobile-menu">
+                <a href="#newsletter" class="mobile-menu-item">Newsletter</a>
+                <a href="#gallery" class="mobile-menu-item">Galerie</a>
+                <a href="#tresor" class="mobile-menu-item">Trésors</a>
+                <a href="#temoignages" class="mobile-menu-item">Témoignages</a>
+                <a href="#carte" class="mobile-menu-item">Nous trouver</a>
+            </div>
         </div>
     </nav>
 </header>
