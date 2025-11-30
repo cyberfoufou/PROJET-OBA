@@ -8,7 +8,7 @@
   /* === PADDING === */
   --section-padding-large: 112px;
   --section-padding-medium: 80px;
-  --section-padding-small: 48px;
+  --section-padding-small: 44px;
   --page-padding-global: 64px;
   --page-padding-mobile: 24px;
   
@@ -24,6 +24,7 @@
   /* === TAILLES DE POLICE === */
   --font-size-hero: 60px;
   --font-size-h1: 48px;
+  --font-size-h2: 30px;
   --font-size-desktop-title: 36px;
   --font-size-desktop-subtitle: 24px;
   --font-size-tagline: 16px;
@@ -81,7 +82,7 @@ body {
 .cadre1-cadre-sous-image {
   display: flex;
   width: 100%;
-  max-width: 768px;
+  max-width: 480px;
   flex-direction: column;
   align-items: center;
   gap: var(--gap-small);
@@ -120,7 +121,7 @@ body {
 
 .galerieOBA,
 .unvoyage {
-  font-size: var(--font-size-desktop-subtitle);
+  font-size: var(--font-size-desktop-tagline);
 }
 
 .font-decouvrez {
@@ -437,7 +438,7 @@ body {
 /* === SECTION TEMOIGNAGES === */
 .titre-temoignages {
   color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-primary);
+  font-family: var(--font-family-secondary);
   font-size: var(--font-size-desktop-title);
   font-weight: var(--font-weight-bold);
   text-align: center;
@@ -447,7 +448,7 @@ body {
 .sous-titre-temoignages {
   color: var(--basecouleurs-oba-ivoire);
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-desktop-subtitle);
+  font-size: var(--font-size-desktop-tagline);
   text-align: center;
   margin-bottom: 40px;
 }
@@ -560,8 +561,8 @@ body {
 
 .contact-title {
   color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-h1);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-h2);
   font-weight: 700;
   margin: 0;
 }
@@ -569,7 +570,7 @@ body {
 .contact-description {
   color: var(--basecouleurs-oba-ivoire);
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-desktop-subtitle);
+  font-size: var(--font-size-desktop-tagline);
   line-height: 1.6;
   margin: 20px 0 0 0;
 }
@@ -673,7 +674,7 @@ body {
 /* === NEWSLETTER === */
 .newsletter-section {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 40px;
   width: 100%;
   max-width: 1200px;
@@ -686,8 +687,8 @@ body {
 
 .newsletter-title {
   color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-primary);
-  font-size: var(--font-size-desktop-title);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-desktop-tagline);
   font-weight: 700;
   margin: 0 0 10px 0;
 }
@@ -695,7 +696,7 @@ body {
 .newsletter-subtitle {
   color: var(--basecouleurs-oba-ivoire);
   font-family: var(--font-family-secondary);
-  font-size: var(--font-size-desktop-subtitle);
+  font-size: var(--font-size-desktop-small);
   margin: 0;
   opacity: 0.9;
 }
@@ -849,6 +850,12 @@ body {
   text-align: right;
 }
 
+
+/* General (hidden checkbox for toggle) */
+.submenu-toggle {
+  display: none;
+}
+
 /* === RESPONSIVE DESKTOP (1024px +) === */
 @media (min-width: 1024px) {
   .navbar-center {
@@ -894,6 +901,39 @@ body {
   .container-temoignages {
     grid-template-columns: repeat(2, 1fr);
   }
+/*. ajout °/
+* Inside your @media (max-width: 767px) query, add/override these for mobile hierarchy */
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: relative; /* Flow in-line instead of absolute */
+  top: auto;
+  left: auto;
+  transform: none;
+  opacity: 1;
+  visibility: visible;
+  margin: 0;
+  padding: 0;
+  min-width: auto;
+  border: none;
+  box-shadow: none;
+  background: var(--basecouleurs-oba-marron); /* Match parent background */
+  transition: none; /* Optional: remove transition for instant open if preferred */
+}
+
+.submenu-toggle:checked + .dropdown-toggle + .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.submenu-toggle:checked + .dropdown-toggle .dropdown-arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown-item {
+  padding-left: 30px; /* Indent sub-items for hierarchy */
+  text-align: left;
+}
+
 }
 
 /* === RESPONSIVE MOBILE (320px - 767px) === */
