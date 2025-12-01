@@ -252,11 +252,21 @@
         <p class="newsletter-subtitle">Recevez les dernières actualités et invitations exclusives</p>
     </div>
     
+html
+<!-- Newsletter -->
+<div class="newsletter-section" id="newsletter">
+    <div class="newsletter-content">
+        <h3 class="newsletter-title">Rejoignez notre newsletter</h3>
+        <p class="newsletter-subtitle">Recevez les dernières actualités et invitations exclusives</p>
+    </div>
+    
     <div class="newsletter-form">
-        <input type="email" placeholder="Votre email" class="newsletter-input">
-        <button class="newsletter-button">Envoyer</button>
+        <input type="email" placeholder="Votre email" class="newsletter-input" id="emailInput">
+        <button class="newsletter-button" onclick="openModal()">Envoyer</button>
     </div>
 </div>
+
+<div class="divider"> </div>
     <div class="divider"></div>
 </div>
 
@@ -350,6 +360,20 @@
         </div>
     </div>
 </footer>
-        
+    <!-- Modal Pop-up -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3 class="modal-title">Complétez votre inscription</h3>
+        <input type="email" class="modal-input" id="modalEmailInput" placeholder="Votre email">
+        <input type="text" class="modal-input" id="prenomInput" placeholder="Votre prénom">
+        <input type="text" class="modal-input" id="nomInput" placeholder="Votre nom">
+        <div class="modal-buttons">
+            <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Annuler</button>
+            <button class="modal-btn modal-btn-primary" onclick="valider()">Valider</button>
+        </div>
+    </div>
+</div>    
 </body>
 </html>
