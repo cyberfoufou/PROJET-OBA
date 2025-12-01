@@ -397,7 +397,7 @@ color: var(--basecouleurs-oba-ivoire);
   border: 1px solid var(--basecouleurs-oba-brunclair);
   border-radius: 4px;
   min-width: 180px;
-  padding: 12px 0;
+  /*padding: 12px 0;*/
   z-index: 999;
   flex-direction: column;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -975,6 +975,15 @@ color: var(--basecouleurs-oba-ivoire);
 
 
 /* === RESPONSIVE MOBILE (320px - 767px) === */
+
+/*  test */
+/* on montre le menu si le bouton est focus */
+
+
+
+/* sinon il disparaît automatiquement */
+/* fin test */
+
 @media (max-width: 767px) {
   .CadrenavBar {
     height: 60px;
