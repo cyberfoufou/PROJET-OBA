@@ -303,6 +303,7 @@ color: var(--basecouleurs-oba-ivoire);
   color: var(--basecouleurs-oba-brunclair);
 }
 
+/*
 /*+++++++++++*/
 /* === DROPDOWN DESKTOP === */
 .nav-dropdown {
@@ -368,131 +369,8 @@ color: var(--basecouleurs-oba-ivoire);
   background: rgba(199, 161, 74, 0.2);
   color: var(--basecouleurs-oba-brunclair);
 }
+/* === SECTION MOBILE FIN === */
 
-/* === MENU BUTTON === */
-.menu-button {
-  padding: 10px 24px;
-  background: #000;
-  color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-tagline);
-  font-weight: 600;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.menu-button:hover {
-  background: var(--basecouleurs-oba-brunclair);
-  color: #000;
-}
-
-/* === MOBILE MENU === */
-.mobile-menu {
-  display: none;
-  position: fixed;
-  top: 46px;
-  background: var(--basecouleurs-oba-marron);
-  border: 1px solid var(--basecouleurs-oba-brunclair);
-  border-radius: 4px;
-  min-width: 180px;
-  /*padding: 12px 0;*/
-  z-index: 999;
-  flex-direction: column;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Removed :focus toggle (replaced with checkbox below) */
-
-.mobile-menu-item {
-  display: block;
-  padding: 12px 20px;
-  color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-tagline);
-  font-weight: 400;
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  transition: all 0.3s ease;
-}
-
-.mobile-menu-item:hover {
-  background: rgba(199, 161, 74, 0.2);
-  color: var(--basecouleurs-oba-brunclair);
-}
-
-/* === MOBILE DROPDOWN === */
-.mobile-dropdown {
-  position: relative;
-}
-
-.mobile-dropdown-toggle {
-  padding: 12px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-tagline);
-  font-weight: 600;
-  background: rgba(199, 161, 74, 0.1);
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.mobile-dropdown-toggle:hover {
-  background: rgba(199, 161, 74, 0.2);
-  color: var(--basecouleurs-oba-brunclair);
-}
-
-.mobile-dropdown-arrow {
-  font-size: 10px;
-  margin-left: 8px;
-  transition: transform 0.3s ease;
-}
-
-.mobile-dropdown-menu {
-  display: none;
-  flex-direction: column;
-  background: rgba(100, 60, 30, 0.8);
-  border-top: 1px solid var(--basecouleurs-oba-brunclair);
-}
-
-.mobile-dropdown:focus-within .mobile-dropdown-menu {
-  display: flex;
-}
-
-.mobile-dropdown:focus-within .mobile-dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-.mobile-dropdown-item {
-  display: block;
-  padding: 12px 40px;
-  color: var(--basecouleurs-oba-ivoire);
-  font-family: var(--font-family-secondary);
-  font-size: var(--font-size-tagline);
-  font-weight: 400;
-  text-decoration: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  text-align: left;
-  transition: all 0.3s ease;
-}
-
-.mobile-dropdown-item:hover {
-  background: rgba(199, 161, 74, 0.2);
-  color: var(--basecouleurs-oba-brunclair);
-}
 
 /* === SECTION TEMOIGNAGES === */
 .titre-temoignages {
@@ -956,7 +834,7 @@ color: var(--basecouleurs-oba-ivoire);
   }
   
   .navbar-left {
-    gap: 24px;
+    gap: 20px;
   }
   
   .gallery {
@@ -994,28 +872,16 @@ color: var(--basecouleurs-oba-ivoire);
     justify-content: flex-start; /* FIX: Align menu button to the right */
   }
   
+  .navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
   .navbar-center {
     display: none;
   }
   
-  .navbar-left {
-    display: none;
-  }
-  
-  .navbar-right {
-    display: flex;
-  }
-  
-  .navbar-logo {
-    height: 40px;
-  }
-  
-  .menu-button {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
-  
-  /* Added: Override main menu display for checkbox toggle (replaces :focus) */
   .submenu-toggle#main-menu-toggle:checked ~ .mobile-menu {
     display: flex;
   }
@@ -1111,7 +977,7 @@ color: var(--basecouleurs-oba-ivoire);
   }
   
   .citation {
-    font-size: 14px;
+    font-size: var(--font-size-small);
   }
   
   .auteur {
@@ -1137,7 +1003,7 @@ color: var(--basecouleurs-oba-ivoire);
   
   .info-label,
   .info-text {
-    font-size: 14px;
+    font-size: var(--font-size-small);
   }
   
   .contact-map-section iframe {
@@ -1194,28 +1060,25 @@ color: var(--basecouleurs-oba-ivoire);
     font-size: 12px;
   }
 
-  /* Added: Override dropdown for mobile (relative positioning, hidden by default, show on :checked) */
-  .dropdown-menu {
-    display: none;
-    flex-direction: column;
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    opacity: 1;
-    visibility: visible;
-    margin: 0;
-    padding: 0;
-    min-width: auto;
-    border: none;
-    box-shadow: none;
-    background: var(--basecouleurs-oba-marron);
-    transition: none;
-  }
-
+  .nav-link {
+  color: var(--basecouleurs-oba-ivoire);
+  font-family: var(--font-family-secondary);
+  font-size: var(--font-size-small);
+  font-weight: 400;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
   .dropdown-item {
-    padding-left: 60px; /* Indent sub-items for hierarchy */
+    padding: 6px; /* Indent sub-items for hierarchy */
     text-align: left;
+    font-size: var(--font-size-small);
   }
 
   /* Limite minimale de 320px */
