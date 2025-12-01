@@ -1338,11 +1338,7 @@ color: var(--basecouleurs-oba-ivoire);
 .modal-btn-secondary:hover {
     background: rgba(139, 94, 60, 0.1);
 }
-```
 
-## 4️⃣ **Avant la fermeture du `</body>`, ajoutez le JavaScript**
-
-```html
 <script>
     function openModal() {
         const email = document.getElementById('emailInput').value.trim();
