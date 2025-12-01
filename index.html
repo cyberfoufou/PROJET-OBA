@@ -23,7 +23,9 @@
                 <div class="dropdown-menu">
                     <a href="#tresor" class="dropdown-item">Trésors</a>
                     <a href="#temoignages" class="dropdown-item">Témoignages</a>
-                    <a href="#carte" class="dropdown-item">Nous trouver</a> 
+                    <a href="#carte" class="dropdown-item">Nous trouver</a>
+                </div>
+            </div>
         </div>
         
         <!-- Logo au centre -->
@@ -251,8 +253,8 @@
     </div>
     
     <div class="newsletter-form">
-    <input type="email" placeholder="Votre email" class="newsletter-input" id="emailInput" required>
-    <button class="newsletter-button" id="btnEnvoyer">Envoyer</button>
+        <input type="email" placeholder="Votre email" class="newsletter-input">
+        <button class="newsletter-button">Envoyer</button>
     </div>
 </div>
     <div class="divider"></div>
@@ -348,89 +350,6 @@
         </div>
     </div>
 </footer>
-   <!-- Modal Pop-up -->
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <h3 class="modal-title" id="modalTitle">Entrez votre prénom</h3>
-        <input type="text" class="modal-input" id="modalInput" placeholder="Votre prénom">
-        <div class="modal-buttons">
-            <button class="modal-btn modal-btn-secondary" id="btnAnnuler">Annuler</button>
-            <button class="modal-btn modal-btn-primary" id="btnValider">Suivant</button>
-        </div>
-    </div>
-</div>
-
-<script>
-    let prenom = '';
-    let nom = '';
-    let step = 0;
-
-    const modal = document.getElementById('modal');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalInput = document.getElementById('modalInput');
-    const btnValider = document.getElementById('btnValider');
-    const btnAnnuler = document.getElementById('btnAnnuler');
-    const emailInput = document.getElementById('emailInput');
-
-    document.getElementById('btnEnvoyer').addEventListener('click', function() {
-        const email = emailInput.value;
         
-        if (!email) {
-            alert('Veuillez entrer votre adresse email');
-            return;
-        }
-        
-        step = 1;
-        modalTitle.textContent = 'Entrez votre prénom';
-        modalInput.placeholder = 'Votre prénom';
-        modalInput.value = '';
-        modal.classList.add('active');
-        modalInput.focus();
-    });
-
-    btnValider.addEventListener('click', function() {
-        const value = modalInput.value.trim();
-        
-        if (!value) {
-            alert('Ce champ est obligatoire');
-            return;
-        }
-        
-        if (step === 1) {
-            prenom = value;
-            step = 2;
-            modalTitle.textContent = 'Entrez votre nom';
-            modalInput.placeholder = 'Votre nom';
-            modalInput.value = '';
-            btnValider.textContent = 'Valider';
-            modalInput.focus();
-        } else if (step === 2) {
-            nom = value;
-            modal.classList.remove('active');
-            
-            alert(`✓ Inscription réussie !\n\nPrénom : ${prenom}\nNom : ${nom}\nEmail : ${emailInput.value}`);
-            
-            emailInput.value = '';
-            prenom = '';
-            nom = '';
-            step = 0;
-            btnValider.textContent = 'Suivant';
-        }
-    });
-
-    btnAnnuler.addEventListener('click', function() {
-        modal.classList.remove('active');
-        prenom = '';
-        nom = '';
-        step = 0;
-        btnValider.textContent = 'Suivant';
-    });
-
-    modalInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            btnValider.click();
-        }
-    });
-</script>     
 </body>
 </html>
