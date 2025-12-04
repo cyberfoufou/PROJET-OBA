@@ -7,6 +7,13 @@
   border: 2px solid rgb(233, 3, 7);
 } 
 */
+.input-popup::placeholder {
+  color: currentColor;
+  font-style: italic;
+  opacity: 0.5;
+}
+
+
 
 :root {
   /* === COULEURS === */
