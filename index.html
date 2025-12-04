@@ -129,8 +129,8 @@
             </div>
              </div>     
                <div class="button-container">
-    <a href="#" class="btn btn-explorer">Explorer</a>
-    <a href="#" class="btn btn-reserver">Réserver</a>
+    <a href="#newsletter" class="btn btn-explorer">Explorer</a>
+    <a href="#carte" class="btn btn-reserver">Réserver</a>
   </div>   
     </div>
 
@@ -185,7 +185,7 @@
 <!-- Section Contact + Map -->
 <div class="cadre_contactez_map bordure_rouge" id="carte">
     <div class="contact-wrapper bordure_rouge">
-        <div class="contact-top">
+        <div class="contact-top" id="carte">
             <div class="contact-left">
                 <div class="contact-label">Contact</div>
                 <h2 class="contact-title">Contactez-nous</h2>
@@ -238,11 +238,25 @@
         <h3 class="newsletter-title">Rejoignez notre newsletter</h3>
         <p class="newsletter-subtitle">Recevez les dernières actualités et invitations exclusives</p>
     </div>
-    
+            <input type="checkbox" id="popupToggle">
     <div class="newsletter-form">
-        <input type="email" placeholder="Votre email" class="newsletter-input" id="emailInput">
+
+        <input type="text" class="trigger-input newsletter-input" placeholder="Clique ici pour ouvrir le formulaire" onfocus="document.getElementById('popupToggle').checked = true;">
+
         <button class="newsletter-button" onclick="openModal()">Envoyer</button>
     </div>
+        <!-- Popup -->
+    <div class="popup">
+            <input type="text" class="input-popup" placeholder="Prénom" value="Prénom">
+            <input type="text" class="input-popup" placeholder="Nom" value="Nom">
+            <input type="text" class="input-popup" placeholder="Votre eMail" value="Votre eMail">
+
+            <button type="button" 
+            class="bouton-popup"
+            onclick="document.getElementById('popupToggle').checked = false;">Envoyez</button>
+    </div>
+    <!-- FIN Popup -->
+
 </div>
 
 <div class="divider"> </div>
@@ -339,20 +353,7 @@
         </div>
     </div>
 </footer>
-    <!-- Modal Pop-up -->
-<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
 
-<div class="modal" id="modal">
-    <div class="modal-content">
-        <h3 class="modal-title">Complétez votre inscription</h3>
-        <input type="email" class="modal-input" id="modalEmailInput" placeholder="Votre email">
-        <input type="text" class="modal-input" id="prenomInput" placeholder="Votre prénom">
-        <input type="text" class="modal-input" id="nomInput" placeholder="Votre nom">
-        <div class="modal-buttons">
-            <button class="modal-btn modal-btn-secondary" onclick="closeModal()">Annuler</button>
-            <button class="modal-btn modal-btn-primary" onclick="valider()">Valider</button>
-        </div>
-    </div>
-</div>    
+
 </body>
 </html>

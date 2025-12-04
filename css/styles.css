@@ -5,7 +5,8 @@
 
 .bordure_rouge {
   border: 2px solid rgb(233, 3, 7);
-} */
+} 
+*/
 
 :root {
   /* === COULEURS === */
@@ -157,6 +158,100 @@ color: var(--basecouleurs-oba-ivoire);
   background: var(--basecouleurs-oba-marron);
   border: 1px ;
 }
+
+/*########### Début CODE popup #############*/
+/* Checkbox invisible pour contrôler le popup */
+#popupToggle {
+display: none;
+}
+
+/* Afficher le popup quand la checkbox est cochée */
+#popupToggle:checked ~ .popup {
+opacity: 1;
+pointer-events: auto;
+transform: translate(-50%, -50%) scale(1);
+}
+
+/* Style de base du popup */
+.popup {
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) scale(0.8);
+background:var( --basecouleurs-oba-marron);
+padding: 20px;
+width: 400px;
+border: 2px solid #333;
+border-radius: 8px;
+opacity: 0;
+pointer-events: none;
+transition: 0.3s ease;
+box-shadow: 0 0 20px rgba(0,0,0,0.35);
+z-index: 10;
+border: 1px solid #ccc;
+border-radius: 4px;
+}
+
+.input-popup {
+width: 100%;
+padding: 8px;
+margin: 8px 0;
+box-sizing: border-box;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+color: var(--basecouleurs-oba-marron);
+font-family: var(--font-family-secondary);
+font-size: var(--font-size-tagline);
+}
+
+/* Overlay optionnel */
+.overlay {
+position: fixed;
+inset: 0;
+background: rgba(0,0,0,0.4);
+opacity: 0;
+pointer-events: none;
+transition: 0.3s;
+z-index: 5;
+}
+
+/* Afficher overlay quand checkbox cochée */
+#popupToggle:checked ~ .overlay {
+opacity: 1;
+pointer-events: auto;
+}
+
+.bouton-popup {
+background:var( --basecouleurs-oba-brunclair);
+color: white;
+border: none;
+cursor: pointer;
+border-radius: 4px;
+font-size: 14px;
+font-weight: bold;
+width: 100%;
+padding: 8px;
+margin: 8px 0;
+box-sizing: border-box;
+
+}
+
+button:hover {
+background: var( --basecouleurs-oba-bleu);
+}
+
+*/
+.trigger-input {
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+width: 300px;
+}
+
+/* #########FIN CODE popup #############*/
+
 
 /* === IMAGES === */
 .placeholder-image {
@@ -414,8 +509,8 @@ color: var(--basecouleurs-oba-ivoire);
 }
 
 .photo-temoin {
-  width: 120px;
-  height: 120px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   overflow: hidden;
   border: 3px solid var(--basecouleurs-oba-brunclair);
@@ -848,6 +943,7 @@ color: var(--basecouleurs-oba-ivoire);
   .container-temoignages {
     grid-template-columns: repeat(2, 1fr);
   }
+
 }
 
 
@@ -887,7 +983,7 @@ color: var(--basecouleurs-oba-ivoire);
   }
   
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
   }
   
@@ -972,8 +1068,8 @@ color: var(--basecouleurs-oba-ivoire);
   }
   
   .photo-temoin {
-    width: 80px;
-    height: 80px;
+    width: 152px;
+    height: 152px;
   }
   
   .citation {
@@ -1057,9 +1153,13 @@ color: var(--basecouleurs-oba-ivoire);
   }
   
   .footer-copyright {
-    font-size: 12px;
+    width: 12px;
   }
 
+  .popup {
+    width: 300px;
+  }
+  
   .nav-link {
   color: var(--basecouleurs-oba-ivoire);
   font-family: var(--font-family-secondary);
